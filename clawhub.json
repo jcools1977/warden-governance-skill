@@ -8,6 +8,8 @@
   "skill_url": "https://warden.an2b.com/openclaw",
   "repository": "https://github.com/an2b/warden-governance-skill",
   "license": "MIT",
+  "pricing": "free",
+  "support_url": "https://warden.an2b.com",
   "install_path": "~/.openclaw/skills/warden-governance/",
   "memory_path": "~/.openclaw/memory/",
   "hooks": [

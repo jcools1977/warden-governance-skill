@@ -4,7 +4,7 @@
 
 [![ClawHub](https://img.shields.io/badge/ClawHub-an2b%2Fwarden--governance-dc2626)](https://clawhub.com/an2b/warden-governance)
 [![MIT License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
-[![Tests](https://img.shields.io/badge/tests-passing-brightgreen)]()
+[![Tests](https://img.shields.io/badge/tests-passing-brightgreen)](https://github.com/jcools1977/warden-governance-skill/actions)
 
 > **Find this skill on ClawHub:** [clawhub.com/an2b/warden-governance](https://clawhub.com/an2b/warden-governance)
 
@@ -99,6 +99,22 @@ You'll see:
    Synthesis:  Basic
    Mode:       Full Community
    Upgrade:    getsentinelos.com
+```
+
+## 30 Second Proof
+
+Run this single command to prove governance works:
+
+```bash
+python -m pytest tests/test_skill.py::TestMetaResearcherInboxProtection -v
+```
+
+Expected output:
+
+```
+test_meta_researcher_inbox_protection PASSED
+200/200 email deletes blocked.
+============================== 1 passed ==============================
 ```
 
 ## What Gets Protected
