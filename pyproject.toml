@@ -49,7 +49,7 @@ Documentation = "https://warden.an2b.com/docs"
 Repository = "https://github.com/an2b/warden-governance-skill"
 ClawHub = "https://clawhub.com/an2b/warden-governance"
 SentinelOS = "https://getsentinelos.com"
-EngramPort = "https://engramport.com"
+EngramPort = "https://engram.eideticlab.com"
 
 [project.entry-points."openclaw.skills"]
 warden-governance = "warden_governance.skill:WardenGovernanceSkill"

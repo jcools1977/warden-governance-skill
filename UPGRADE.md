@@ -75,7 +75,7 @@ You'll see:
 
 **How:**
 
-1. Register at [engramport.com](https://engramport.com) or via API:
+1. Register at [engram.eideticlab.com](https://engram.eideticlab.com) or via API:
 
 ```bash
 curl -X POST https://mandeldb.com/api/v1/portal/register \
@@ -224,4 +224,4 @@ print(f'Memory: {mode[\"memory\"]}')
 
 ---
 
-Built on [Sentinel_OS](https://getsentinelos.com) and [EngramPort](https://engramport.com) by [AN2B Technologies](https://an2b.com)
+Built on [Sentinel_OS](https://getsentinelos.com) and [EngramPort](https://engram.eideticlab.com) by [AN2B Technologies](https://an2b.com)

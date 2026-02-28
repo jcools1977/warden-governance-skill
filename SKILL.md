@@ -251,7 +251,7 @@ Set `ENGRAMPORT_API_KEY` to upgrade memory from local SQLite to EngramPort cloud
 
 API keys use format `ek_bot_*` with SHA-256 hashed storage.
 
-Get your key at [engramport.com](https://engramport.com)
+Get your key at [engram.eideticlab.com](https://engram.eideticlab.com)
 
 ---
 
@@ -343,6 +343,6 @@ warden-governance-skill/
 
 ---
 
-Built on [Sentinel_OS](https://getsentinelos.com) and [EngramPort](https://engramport.com) by [AN2B Technologies](https://an2b.com)
+Built on [Sentinel_OS](https://getsentinelos.com) and [EngramPort](https://engram.eideticlab.com) by [AN2B Technologies](https://an2b.com)
 
 *The lobster protects the inbox.*

@@ -200,7 +200,7 @@ Performance proof: 100 identical `api.call` actions result in 1 policy evaluatio
 
 **Enterprise (API keys set):**
 - [Sentinel_OS](https://getsentinelos.com) cloud governance with real-time policy evaluation
-- [EngramPort](https://engramport.com) cloud memory with 3072-dim vector search (MandelDB backend)
+- [EngramPort](https://engram.eideticlab.com) cloud memory with 3072-dim vector search (MandelDB backend)
 - AEGIS cryptographic provenance (SHA-256 + RSA per memory)
 - Eidetic AI synthesis across memories
 - Multi-agent orchestration via EngramPortOrchestra
@@ -238,7 +238,7 @@ Set `ENGRAMPORT_API_KEY` to upgrade from local SQLite to cloud memory:
 - AEGIS cryptographic provenance per memory
 - Namespace-isolated storage (`bot:{slug}:{uid}`)
 - Multi-agent orchestration with `EngramPortOrchestra`
-- Get your key: [engramport.com](https://engramport.com)
+- Get your key: [engram.eideticlab.com](https://engram.eideticlab.com)
 
 ## Configuration
 
@@ -313,7 +313,7 @@ warden-governance-skill/
 
 ---
 
-Built on [Sentinel_OS](https://getsentinelos.com) and [EngramPort](https://engramport.com) by [AN2B Technologies](https://an2b.com)
+Built on [Sentinel_OS](https://getsentinelos.com) and [EngramPort](https://engram.eideticlab.com) by [AN2B Technologies](https://an2b.com)
 
 Docs: [warden.an2b.com/docs](https://warden.an2b.com/docs) | ClawHub: [clawhub.com/an2b/warden-governance](https://clawhub.com/an2b/warden-governance)
 
