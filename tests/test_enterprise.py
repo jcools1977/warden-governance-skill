@@ -126,3 +126,27 @@ class TestSettings:
         assert settings.warden_fail_open is False
         assert settings.warden_cache_ttl == 300
         assert settings.warden_agent_id == "openclaw-agent"
+
+    def test_from_env_reads_environment(self):
+        import os
+        with patch.dict(os.environ, {
+            "SENTINEL_API_KEY": "snos_env_test",
+            "WARDEN_FAIL_OPEN": "true",
+            "WARDEN_AGENT_ID": "env-bot",
+            "WARDEN_CACHE_TTL": "600",
+        }, clear=False):
+            settings = Settings.from_env()
+            assert settings.sentinel_api_key == "snos_env_test"
+            assert settings.warden_fail_open is True
+            assert settings.warden_agent_id == "env-bot"
+            assert settings.warden_cache_ttl == 600
+
+    def test_cache_ttl_from_config(self):
+        settings = Settings.from_config({
+            "WARDEN_CACHE_TTL": "120",
+        })
+        assert settings.warden_cache_ttl == 120
+
+    def test_engramport_fallback_default_true(self):
+        settings = Settings()
+        assert settings.engramport_fallback is True

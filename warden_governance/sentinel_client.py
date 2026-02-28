@@ -110,10 +110,21 @@ class SentinelClient:
         if cached is not None:
             return cached
 
-        if self._enterprise_mode:
-            result = self._check_enterprise(action)
-        else:
-            result = self._check_community(action)
+        try:
+            if self._enterprise_mode:
+                result = self._check_enterprise(action)
+            else:
+                result = self._check_community(action)
+        except GovernanceError:
+            raise
+        except Exception as exc:
+            logger.error("Governance engine error: %s", exc)
+            if self.config.warden_fail_open:
+                return CheckResult(
+                    decision=Decision.ALLOW,
+                    reason=f"governance engine error (fail-open): {exc}",
+                )
+            raise GovernanceError(f"governance engine error: {exc}")
 
         self.audit_log.write(
             action=action,
