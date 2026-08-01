@@ -200,11 +200,18 @@ Performance proof: 100 identical `api.call` actions result in 1 policy evaluatio
 
 **Enterprise (API keys set):**
 - [Sentinel_OS](https://getsentinelos.com) cloud governance with real-time policy evaluation
-- [EngramPort](https://engram.eideticlab.com) cloud memory with 3072-dim vector search (MandelDB backend)
-- AEGIS cryptographic provenance (SHA-256 + RSA per memory)
-- Eidetic AI synthesis across memories
-- Multi-agent orchestration via EngramPortOrchestra
-- Signed PDF compliance exports (SOC2/HIPAA)
+- [EngramPort](https://engramport.com) cloud memory with 3072-dim vector search
+- Content-addressed integrity hashing (SHA-256) on every stored memory
+- AI synthesis across memories
+- Multi-agent orchestration
+
+> **On integrity and provenance.** Stored memories carry a SHA-256 content hash,
+> and the local audit log is a verifiable hash chain (see `verify_chain()`).
+> That gives **tamper-evidence**. It is deliberately *not* described as
+> cryptographic provenance: a hash produced and served by the same service
+> cannot prove origin to a third party. Digital signatures over published
+> checkpoints are on the roadmap and are not shipped today. We would rather
+> under-claim than have a compliance reviewer discover the gap.
 
 ### Mode Matrix
 
@@ -229,16 +236,16 @@ Set `SENTINEL_API_KEY` to upgrade from local YAML to cloud governance:
 - Python and Node.js SDKs
 - Get your key: [getsentinelos.com](https://getsentinelos.com)
 
-### EngramPort (Memory via MandelDB)
+### EngramPort (Memory)
 
 Set `ENGRAMPORT_API_KEY` to upgrade from local SQLite to cloud memory:
 
 - 5 endpoints: `/register`, `/remember`, `/recall`, `/reflect`, `/stats`
-- 3072-dim OpenAI embeddings via Pinecone for semantic search
-- AEGIS cryptographic provenance per memory
-- Namespace-isolated storage (`bot:{slug}:{uid}`)
-- Multi-agent orchestration with `EngramPortOrchestra`
-- Get your key: [engram.eideticlab.com](https://engram.eideticlab.com)
+- 3072-dim embeddings for semantic search
+- SHA-256 content hash returned with every stored memory
+- Namespace-isolated storage
+- Multi-agent orchestration
+- Get your key: [engramport.com](https://engramport.com)
 
 ## Configuration
 
@@ -313,7 +320,7 @@ warden-governance-skill/
 
 ---
 
-Built on [Sentinel_OS](https://getsentinelos.com) and [EngramPort](https://engram.eideticlab.com) by [AN2B Technologies](https://an2b.com)
+Built on [Sentinel_OS](https://getsentinelos.com) and [EngramPort](https://engramport.com) by [AN2B Technologies](https://an2b.com)
 
 Docs: [warden.an2b.com/docs](https://warden.an2b.com/docs) | ClawHub: [clawhub.com/an2b/warden-governance](https://clawhub.com/an2b/warden-governance)
 
